@@ -1,0 +1,18 @@
+name: 'Gemini PR Code Review'
+description: 'Uses the Gemini API to analyze pull request diffs and posts line-specific review comments, with JSON structured output enforcement.'
+
+inputs:
+  gemini-api-key:
+    description: 'The API key for the Gemini model.'
+    required: true
+  github-token:
+    description: 'The GitHub token (usually GH_TOKEN) used to fetch the diff and post the review.'
+    required: true
+  model:
+    description: 'The Gemini model to use for the review.'
+    required: false
+    default: 'gemini-2.5-flash-preview-09-2025'
+
+runs:
+  using: 'node24'
+  main: 'dist/index.js'
