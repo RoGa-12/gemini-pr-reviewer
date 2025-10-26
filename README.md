@@ -57,7 +57,7 @@ jobs:
             gemini-api-key: ${{ secrets.GEMINI_API_KEY }} 
           
             # Required: The token used to interact with the GitHub API
-            github-token: ${{ secrets.GH_TOKEN }}
+            github-token: ${{ secrets.GITHUB_TOKEN }}
           
             # Optional: Specify the model (default is gemini-2.5-flash-preview-09-2025)
             model: 'gemini-2.5-flash-preview-09-2025'
